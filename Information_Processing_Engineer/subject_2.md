@@ -16,14 +16,14 @@
 ### 2. 정렬
 - 버블 정렬  
 -> 한번 실행시 마다 가장 큰 값이 맨 뒤로 이동  
-![버블 정렬](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/subject/bubble_sort.png "버블 정렬")
+![버블 정렬](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/subject_2/bubble_sort.png "버블 정렬")
 - 선택 정렬  
 -> 가장 작은 값 선택해서 정렬 안된 가장 왼쪽 값과 변경  
-![선택 정렬](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/subject/select_sort.png "선택 정렬")
+![선택 정렬](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/subject_2/select_sort.png "선택 정렬")
 
 - 삽입 정렬  
 -> 카드를 기존의 정렬된 카드 사시의 올바른 자리에 위치하게 하는 정렬
-![삽입 정렬](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/subject/insert_sort.png "삽입 정렬")
+![삽입 정렬](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/subject_2/insert_sort.png "삽입 정렬")
 
 선택, 삽입, 버블정렬 : O(n2)
 병합 정렬 : O(N log n)
@@ -42,10 +42,10 @@
 ### 5. 스택과 큐
 - 스택
     - LIFO(Last in First Out), 한쪽에서 삽입과 삭제  
-    ![스택](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/subject/stack.png "스택")
+    ![스택](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/subject_2/stack.png "스택")
 - 큐
     - FIFO(First in First Out), 각각의 한 쪽 끝에서 삽입과 삭제  
-    ![큐](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/subject/queue.png "큐")
+    ![큐](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/subject_2/queue.png "큐")
 
 ### 6. 인수 테스트
 - 사용자 인수 테스트 : 사용자가 시스템 사용의 적절성 여부 확인
