@@ -27,7 +27,7 @@ class Solution {
 ### 출력 예시
 ![문제](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/codingTest/Programmers/level_1/pccp1-1.png "문제")
 
-![문제](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/codingTest/Programmers/level_2/pccp1-2.png "문제")
+![문제](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/codingTest/Programmers/level_1/pccp1-2.png "문제")
 
 
 ### 나의 답
