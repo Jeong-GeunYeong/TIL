@@ -41,3 +41,20 @@ MemberRepository는 구현체로 memoryMemberRepository와 JdbcMemberRepository�
 - `show-sql` : JPA가 생성하는 SQL을 출력한다.
 - `ddl-auto` : JPA는 테이블을 자동으로 생성하는 기능을 제공하는데 `none` 를 사용하면 해당 기능을 꺼버림.
     - `create` 를 사용하면 엔티티 정보를 바탕으로 테이블도 직접 생성해줌.
+
+### 스프링 데이터 JPA
+스프링 부트와 JPA만 사용해도 개발 생산성이 정말 많이 증가하고, 개발해야할 코드도 확연히 줄어듬. 여기에 스프링 데이터 JPA를 사용하면, 기존의 한계를 넘어 마치 마법처럼, 리포지토리에 구현 클래스 없이 인터페이스 만으로 개발을 완료할 가능. 그리고 반복 개발해온 기본 CRUD 기능도 스프링 데이터 JPA가 모두 제공해줌.
+지금까지 조금이라도 단순하고 반복이라 생각했던 개발 코드들이 확연하게 줄어듬. 따라서 개발자는 핵심 비즈니스 로직을 개발하는데, 집중할 수 있다.
+실무에서 관계형 데이터베이스를 사용한다면 스프링 데이터 JPA는 이제 선택이 아니라 필수.
+
+**주의 : 스프링 데이터 JPA는 JPA를 편리하게 사용하도록 도와주는 기술입니다. 따라서 JPA를 먼저 학습한 후에 스프링 데이터 JPA를 학습해야 합니다.**
+
+- 스프링 데이터 JPA가 `SpringDataJpaMemberRepositor` 를 스프링 빈으로 자동 등록.
+![스프링데이터](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/Spring/springJPA1.png "스프링데이터")
+![스프링데이터JPA](https://raw.githubusercontent.com/Jeong-GeunYeong/TIL/master/image/Spring/springJPA2.png "스프링데이터JPA")
+- 스프링 데이터 제공기능
+    - 인터페이스를 통한 기본적인 CRUD
+    - `findByName()` , `findByEmail()` 처럼 메서드 이름 만으로 조회 기능 제공
+    - 페이징 기능 자동 제공
+    
+    참고: 실무에서는 JPA와 스프링 데이터 JPA를 기본으로 사용하고, 복잡한 동적 쿼리는 Querydsl이라는 라이브러리를 사용하면 된다. Querydsl을 사용하면 쿼리도 자바 코드로 안전하게 작성할 수 있고, 동적 쿼리도 편리하게 작성할 수 있다. 이 조합으로 해결하기 어려운 쿼리는 JPA가 제공하는 네이티브 쿼리를 사용하거나, 앞서 학습한 스프링 JDBCTemplate를 사용하면 된다.
