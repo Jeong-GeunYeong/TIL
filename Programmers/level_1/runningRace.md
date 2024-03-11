@@ -23,6 +23,9 @@ class Solution {
 
 ### 접근 방법
 버블 정렬 느낌으로 접근하였음.
+----
+HashMap을 이용하여 Key에 선수 이름 value에 등수를 넣어서 순위를 만들고 
+HashMap으로 갱신을 시도하였음.
 
 
 ### 나의 답
@@ -58,10 +61,46 @@ public class Main {
 }
 ```
 
-### 정답 코드
+### 바꾼 코드
 ```java
+import java.util.*;
 
+public class Main {
+
+    public static void main(String[] args) {
+        String[] answer ={};
+        String[] players = {"mumu", "soe", "poe", "kai", "mine"};
+        String[] callings = {"kai", "kai", "mine", "mine"};
+
+        Map<String, Integer> race = new HashMap<>();
+        for(int i=0; i<players.length; i++) {
+            race.put(players[i], i);
+        }
+
+        // 연산 시작
+        for(String player : callings) {
+            // 등수 호출
+            int rank = race.get(player);
+            // 앞서 가던 선수 호출
+            String beforePlayer = players[rank-1];
+
+            // players 배열 갱신
+            players[rank-1] = player;
+            players[rank] = beforePlayer;
+
+            // rankMap 갱신
+            race.put(player, rank-1);
+            race.put(beforePlayer, rank);
+        }
+
+        System.out.println(Arrays.toString(players));
+
+
+
+
+    }
+}
 ```
-출처: https://velog.io/@zinna_1109/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-PCCP-%EA%B8%B0%EC%B6%9C%EB%AC%B8%EC%A0%9C-1%EB%B2%88
+
 
 시간 초과가 떠서 더욱 효율적으로 짜야할 필요
